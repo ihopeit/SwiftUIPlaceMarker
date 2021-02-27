@@ -15,6 +15,11 @@ struct LandmarkRow: View {
             landmark.image.resizable().frame(width: 50, height: 50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
             Text(landmark.name)
             Spacer()
+            
+            if landmark.isFavorite {
+                //system images are vector based, you can change their color with the foregroundColor(_:) modifier.
+                Image(systemName: "star.fill").foregroundColor(.yellow)
+            }
         }
     }
 }
