@@ -1,15 +1,13 @@
 //
-//  ContentView.swift
-//  SwiftUIDemo
+//  LandmarkDetail.swift
+//  SwiftUIPlaceMarker
 //
-//  Created by David Euler on 2021/2/26.
+//  Created by David Euler on 2021/2/27.
 //
 
 import SwiftUI
-import CoreData
 
-struct ContentView: View {
-
+struct LandmarkDetail: View {
     var body: some View {
         VStack {
             //To allow the map content to extend to the top edge of the screen
@@ -47,14 +45,10 @@ struct ContentView: View {
             Spacer()
         }
     }
-
 }
 
-
-struct ContentView_Previews: PreviewProvider {
+struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            ContentView()
-        }
+        LandmarkDetail()
     }
 }
