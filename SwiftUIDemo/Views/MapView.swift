@@ -26,6 +26,8 @@ struct MapView: View {
         Place(name: "Big Ben", latitude: 31.230006, longitude: 120.54002)
     ]
     
+    var coordinate: CLLocationCoordinate2D
+    
     //@State attribute to establish a source of truth for data in your app that you can modify from more than one view.
     @State private var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 31.21, longitude: 120.50),
@@ -38,12 +40,21 @@ struct MapView: View {
             MapPin(coordinate: place.coordinate)
 //            MapMarker(coordinate: place.coordinate)
 
+        }.onAppear {
+            setRegion(coordinate)
         }
+    }
+    
+    private func setRegion(_ coordinate: CLLocationCoordinate2D) {
+        region = MKCoordinateRegion(
+            center: coordinate,
+            span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+        )
     }
 }
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView()
+        MapView(coordinate: CLLocationCoordinate2D(latitude: 34.011_286, longitude: -116.166_868))
     }
 }
