@@ -15,6 +15,9 @@
 		4424F72425E93728009702A7 /* SwiftUIDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4424F72225E93728009702A7 /* SwiftUIDemo.xcdatamodeld */; };
 		4424F72F25E93728009702A7 /* SwiftUIDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4424F72E25E93728009702A7 /* SwiftUIDemoTests.swift */; };
 		4424F73A25E93728009702A7 /* SwiftUIDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4424F73925E93728009702A7 /* SwiftUIDemoUITests.swift */; };
+		4486170D25E947A000F88AFC /* turtlerock@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4486170C25E947A000F88AFC /* turtlerock@2x.jpg */; };
+		4486171525E9481900F88AFC /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4486171425E9481900F88AFC /* CircleImage.swift */; };
+		4486171A25E9D66100F88AFC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4486171925E9D66100F88AFC /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4424F71425E93727009702A7 /* SwiftUIDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4424F71425E93727009702A7 /* SwiftUIPlaceMarker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUIPlaceMarker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4424F71725E93727009702A7 /* SwiftUIDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoApp.swift; sourceTree = "<group>"; };
 		4424F71925E93727009702A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4424F71B25E93728009702A7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -43,12 +46,15 @@
 		4424F72025E93728009702A7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4424F72325E93728009702A7 /* SwiftUIDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SwiftUIDemo.xcdatamodel; sourceTree = "<group>"; };
 		4424F72525E93728009702A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4424F72A25E93728009702A7 /* SwiftUIDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4424F72A25E93728009702A7 /* SwiftUIPlaceMarkerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIPlaceMarkerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4424F72E25E93728009702A7 /* SwiftUIDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoTests.swift; sourceTree = "<group>"; };
 		4424F73025E93728009702A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4424F73525E93728009702A7 /* SwiftUIDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4424F73525E93728009702A7 /* SwiftUIPlaceMarkerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUIPlaceMarkerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4424F73925E93728009702A7 /* SwiftUIDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIDemoUITests.swift; sourceTree = "<group>"; };
 		4424F73B25E93728009702A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4486170C25E947A000F88AFC /* turtlerock@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "turtlerock@2x.jpg"; path = "../../../Documents/turtlerock@2x.jpg"; sourceTree = "<group>"; };
+		4486171425E9481900F88AFC /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		4486171925E9D66100F88AFC /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		4424F70B25E93727009702A7 = {
 			isa = PBXGroup;
 			children = (
+				4486170625E9472900F88AFC /* Resources */,
 				4424F71625E93727009702A7 /* SwiftUIDemo */,
 				4424F72D25E93728009702A7 /* SwiftUIDemoTests */,
 				4424F73825E93728009702A7 /* SwiftUIDemoUITests */,
@@ -89,9 +96,9 @@
 		4424F71525E93727009702A7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4424F71425E93727009702A7 /* SwiftUIDemo.app */,
-				4424F72A25E93728009702A7 /* SwiftUIDemoTests.xctest */,
-				4424F73525E93728009702A7 /* SwiftUIDemoUITests.xctest */,
+				4424F71425E93727009702A7 /* SwiftUIPlaceMarker.app */,
+				4424F72A25E93728009702A7 /* SwiftUIPlaceMarkerTests.xctest */,
+				4424F73525E93728009702A7 /* SwiftUIPlaceMarkerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +113,8 @@
 				4424F72525E93728009702A7 /* Info.plist */,
 				4424F72225E93728009702A7 /* SwiftUIDemo.xcdatamodeld */,
 				4424F71D25E93728009702A7 /* Preview Content */,
+				4486171425E9481900F88AFC /* CircleImage.swift */,
+				4486171925E9D66100F88AFC /* MapView.swift */,
 			);
 			path = SwiftUIDemo;
 			sourceTree = "<group>";
@@ -136,12 +145,20 @@
 			path = SwiftUIDemoUITests;
 			sourceTree = "<group>";
 		};
+		4486170625E9472900F88AFC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4486170C25E947A000F88AFC /* turtlerock@2x.jpg */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4424F71325E93727009702A7 /* SwiftUIDemo */ = {
+		4424F71325E93727009702A7 /* SwiftUIPlaceMarker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4424F73E25E93728009702A7 /* Build configuration list for PBXNativeTarget "SwiftUIDemo" */;
+			buildConfigurationList = 4424F73E25E93728009702A7 /* Build configuration list for PBXNativeTarget "SwiftUIPlaceMarker" */;
 			buildPhases = (
 				4424F71025E93727009702A7 /* Sources */,
 				4424F71125E93727009702A7 /* Frameworks */,
@@ -151,14 +168,14 @@
 			);
 			dependencies = (
 			);
-			name = SwiftUIDemo;
+			name = SwiftUIPlaceMarker;
 			productName = SwiftUIDemo;
-			productReference = 4424F71425E93727009702A7 /* SwiftUIDemo.app */;
+			productReference = 4424F71425E93727009702A7 /* SwiftUIPlaceMarker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4424F72925E93728009702A7 /* SwiftUIDemoTests */ = {
+		4424F72925E93728009702A7 /* SwiftUIPlaceMarkerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4424F74125E93728009702A7 /* Build configuration list for PBXNativeTarget "SwiftUIDemoTests" */;
+			buildConfigurationList = 4424F74125E93728009702A7 /* Build configuration list for PBXNativeTarget "SwiftUIPlaceMarkerTests" */;
 			buildPhases = (
 				4424F72625E93728009702A7 /* Sources */,
 				4424F72725E93728009702A7 /* Frameworks */,
@@ -169,14 +186,14 @@
 			dependencies = (
 				4424F72C25E93728009702A7 /* PBXTargetDependency */,
 			);
-			name = SwiftUIDemoTests;
+			name = SwiftUIPlaceMarkerTests;
 			productName = SwiftUIDemoTests;
-			productReference = 4424F72A25E93728009702A7 /* SwiftUIDemoTests.xctest */;
+			productReference = 4424F72A25E93728009702A7 /* SwiftUIPlaceMarkerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4424F73425E93728009702A7 /* SwiftUIDemoUITests */ = {
+		4424F73425E93728009702A7 /* SwiftUIPlaceMarkerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4424F74425E93728009702A7 /* Build configuration list for PBXNativeTarget "SwiftUIDemoUITests" */;
+			buildConfigurationList = 4424F74425E93728009702A7 /* Build configuration list for PBXNativeTarget "SwiftUIPlaceMarkerUITests" */;
 			buildPhases = (
 				4424F73125E93728009702A7 /* Sources */,
 				4424F73225E93728009702A7 /* Frameworks */,
@@ -187,9 +204,9 @@
 			dependencies = (
 				4424F73725E93728009702A7 /* PBXTargetDependency */,
 			);
-			name = SwiftUIDemoUITests;
+			name = SwiftUIPlaceMarkerUITests;
 			productName = SwiftUIDemoUITests;
-			productReference = 4424F73525E93728009702A7 /* SwiftUIDemoUITests.xctest */;
+			productReference = 4424F73525E93728009702A7 /* SwiftUIPlaceMarkerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -214,7 +231,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4424F70F25E93727009702A7 /* Build configuration list for PBXProject "SwiftUIDemo" */;
+			buildConfigurationList = 4424F70F25E93727009702A7 /* Build configuration list for PBXProject "SwiftUIPlaceMarker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -227,9 +244,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4424F71325E93727009702A7 /* SwiftUIDemo */,
-				4424F72925E93728009702A7 /* SwiftUIDemoTests */,
-				4424F73425E93728009702A7 /* SwiftUIDemoUITests */,
+				4424F71325E93727009702A7 /* SwiftUIPlaceMarker */,
+				4424F72925E93728009702A7 /* SwiftUIPlaceMarkerTests */,
+				4424F73425E93728009702A7 /* SwiftUIPlaceMarkerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -239,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4486170D25E947A000F88AFC /* turtlerock@2x.jpg in Resources */,
 				4424F71F25E93728009702A7 /* Preview Assets.xcassets in Resources */,
 				4424F71C25E93728009702A7 /* Assets.xcassets in Resources */,
 			);
@@ -266,9 +284,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4424F72425E93728009702A7 /* SwiftUIDemo.xcdatamodeld in Sources */,
+				4486171A25E9D66100F88AFC /* MapView.swift in Sources */,
 				4424F72125E93728009702A7 /* Persistence.swift in Sources */,
 				4424F71A25E93727009702A7 /* ContentView.swift in Sources */,
 				4424F71825E93727009702A7 /* SwiftUIDemoApp.swift in Sources */,
+				4486171525E9481900F88AFC /* CircleImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,12 +313,12 @@
 /* Begin PBXTargetDependency section */
 		4424F72C25E93728009702A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4424F71325E93727009702A7 /* SwiftUIDemo */;
+			target = 4424F71325E93727009702A7 /* SwiftUIPlaceMarker */;
 			targetProxy = 4424F72B25E93728009702A7 /* PBXContainerItemProxy */;
 		};
 		4424F73725E93728009702A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4424F71325E93727009702A7 /* SwiftUIDemo */;
+			target = 4424F71325E93727009702A7 /* SwiftUIPlaceMarker */;
 			targetProxy = 4424F73625E93728009702A7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -435,7 +455,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ihopeit.SwiftUIDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ihopeit.SwiftUIPlaceMarker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -457,7 +477,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ihopeit.SwiftUIDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ihopeit.SwiftUIPlaceMarker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -482,7 +502,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUIDemo.app/SwiftUIDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUIPlaceMarker.app/SwiftUIPlaceMarker";
 			};
 			name = Debug;
 		};
@@ -504,7 +524,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUIDemo.app/SwiftUIDemo";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftUIPlaceMarker.app/SwiftUIPlaceMarker";
 			};
 			name = Release;
 		};
@@ -551,7 +571,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4424F70F25E93727009702A7 /* Build configuration list for PBXProject "SwiftUIDemo" */ = {
+		4424F70F25E93727009702A7 /* Build configuration list for PBXProject "SwiftUIPlaceMarker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4424F73C25E93728009702A7 /* Debug */,
@@ -560,7 +580,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4424F73E25E93728009702A7 /* Build configuration list for PBXNativeTarget "SwiftUIDemo" */ = {
+		4424F73E25E93728009702A7 /* Build configuration list for PBXNativeTarget "SwiftUIPlaceMarker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4424F73F25E93728009702A7 /* Debug */,
@@ -569,7 +589,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4424F74125E93728009702A7 /* Build configuration list for PBXNativeTarget "SwiftUIDemoTests" */ = {
+		4424F74125E93728009702A7 /* Build configuration list for PBXNativeTarget "SwiftUIPlaceMarkerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4424F74225E93728009702A7 /* Debug */,
@@ -578,7 +598,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4424F74425E93728009702A7 /* Build configuration list for PBXNativeTarget "SwiftUIDemoUITests" */ = {
+		4424F74425E93728009702A7 /* Build configuration list for PBXNativeTarget "SwiftUIPlaceMarkerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4424F74525E93728009702A7 /* Debug */,

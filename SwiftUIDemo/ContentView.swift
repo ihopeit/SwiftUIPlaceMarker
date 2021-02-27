@@ -9,72 +9,52 @@ import SwiftUI
 import CoreData
 
 struct ContentView: View {
-    @Environment(\.managedObjectContext) private var viewContext
-
-    @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
-        animation: .default)
-    private var items: FetchedResults<Item>
 
     var body: some View {
-        List {
-            ForEach(items) { item in
-                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+        VStack {
+            //To allow the map content to extend to the top edge of the screen
+            // .ignoresSafeArea(edges: .top)
+            MapView().ignoresSafeArea(edges: .top).frame(height:300)
+            
+            // offsets the view from its original position `y`.
+            CircleImage().offset(y:-70).padding(.bottom, -90)
+            
+            VStack (alignment: .leading) {
+                Text("A map application")
+                    .font(.title)
+                    .foregroundColor(.green)
+                
+                HStack {
+                    Text("QionglonShan Mountain")//.font(.subheadline)
+                    //A spacer expands to make its containing view use all of the space of its parent view, instead of having its size defined only by its contents.
+                    Spacer()
+                    Text("Suzhou")//.font(.subheadline)
+                }
+                //move the subheadline font modifier from each Text view to the HStack, and apply the secondary color to the subheadline text.
+                .font(.subheadline).foregroundColor(.secondary)
+                
+                //Add a divider and some additional descriptive text for the landmark.
+                Divider()
+
+                Text("About QionglongShan Mountain")
+                    .font(.title2)
+                Text("Descriptive text goes here.")
             }
-            .onDelete(perform: deleteItems)
-        }
-        .toolbar {
-            #if os(iOS)
-            EditButton()
-            #endif
-
-            Button(action: addItem) {
-                Label("Add Item", systemImage: "plus")
-            }
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            offsets.map { items[$0] }.forEach(viewContext.delete)
-
-            do {
-                try viewContext.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
+            //use the padding() modifier method to give the landmark’s name and details a little more space.
+            .padding()
+            
+            //Add a spacer at the bottom of the outer VStack to push the content to the top of the screen.
+            Spacer()
         }
     }
+
 }
 
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        Group {
+            ContentView()
+        }
     }
 }
