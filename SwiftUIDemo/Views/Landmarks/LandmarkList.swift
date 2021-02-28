@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct LandmarkList: View {
+    //The modelData property gets its value automatically, as long as the environmentObject(_:) modifier has been applied to a parent.
+    @EnvironmentObject var modelData: ModelData
     
     //State is a value, or a set of values, that can change over time, and that affects a view’s behavior, content, or layout.
     @State private var showFavoritesOnly = false
     
     var filteredLandmarks: [Landmark] {
-           landmarks.filter { landmark in
-               (!showFavoritesOnly || landmark.isFavorite)
-           }
-       }
+        modelData.landmarks.filter { landmark in
+            (!showFavoritesOnly || landmark.isFavorite)
+        }
+    }
     
     var body: some View {
 //        List {
@@ -53,6 +55,7 @@ struct LandmarkList_Previews: PreviewProvider {
     static var previews: some View {
         ForEach(["iPhone SE (2nd generation)", "iPhone XS Max"], id: \.self) { deviceName in
             LandmarkList()
+                .environmentObject(ModelData())
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
         }

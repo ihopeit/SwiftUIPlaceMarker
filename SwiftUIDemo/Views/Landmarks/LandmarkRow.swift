@@ -27,9 +27,9 @@ struct LandmarkRow: View {
 struct LandmarkRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            LandmarkRow(landmark: landmarks[0]) //.previewLayout(.fixed(width: 300, height: 70))
+            LandmarkRow(landmark: ModelData().landmarks[0]) //.previewLayout(.fixed(width: 300, height: 70))
             
-            LandmarkRow(landmark: landmarks[1]) //.previewLayout(.fixed(width: 300, height: 70))
+            LandmarkRow(landmark: ModelData().landmarks[1]) //.previewLayout(.fixed(width: 300, height: 70))
         }
         
         //To simplify the code, move the previewLayout(_:) call to the outside of the group’s child declarations.

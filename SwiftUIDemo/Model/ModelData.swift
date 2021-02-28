@@ -7,7 +7,12 @@
 
 import Foundation
 
-var landmarks: [Landmark] = load("landmarkData.json")
+final class ModelData: ObservableObject {
+    //An observable object needs to publish any changes to its data, so that its subscribers can pick up the change.
+    @Published var landmarks: [Landmark] = load("landmarkData.json")
+}
+
+
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
